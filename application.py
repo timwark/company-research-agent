@@ -172,9 +172,13 @@ async def process_research(job_id: str, data: ResearchRequest):
         )
         if mongodb:
             mongodb.update_job(job_id=job_id, status="failed", error=str(e))
+
 @app.get("/")
 async def ping():
-    return {"message": "Alive"}
+    return {"message": "Alive - TW edit!!"}
+
+
+###### TW - Start of front-end code ########
 
 @app.get("/research/pdf/{filename}")
 async def get_pdf(filename: str):
